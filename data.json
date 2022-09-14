@@ -1,0 +1,10 @@
+{
+    "facebook": {
+        "email": "example@email.com",
+        "password": "abgdevzt"
+    },
+    "twitter": {
+        "email": "example@email.com",
+        "password": "twitter"
+    }
+}
