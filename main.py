@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import json
+import pyperclip
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 from string import ascii_letters, digits
@@ -19,6 +20,7 @@ def generate_password():
 
     new_password = ''.join([i for i in password_list])
     password_entry.insert(0, new_password)
+    pyperclip.copy(new_password)
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -96,15 +98,15 @@ password_label.grid(column=0, row=3)
 
 # Entry
 
-web_entry = tk.Entry(width=25)
+web_entry = tk.Entry(width=35)
 web_entry.grid(column=1, row=1)
 web_entry.focus()
 
-email_username_entry = tk.Entry(width=50)
-email_username_entry.grid(column=1, row=2, columnspan=2)
+email_username_entry = tk.Entry(width=35)
+email_username_entry.grid(column=1, row=2)
 email_username_entry.insert(0, 'example@email.com')
 
-password_entry = tk.Entry(width=25)
+password_entry = tk.Entry(width=35)
 password_entry.grid(column=1, row=3)
 
 # Button
